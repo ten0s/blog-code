@@ -1,6 +1,6 @@
 ```
 $ git clone https://github.com/ten0s/blog-code
-$ cd blog-code/git-difftool-for-binaries
+$ cd blog-code/git-difftool-and-binaries-files
 $ git config --local include.path $PWD/.gitconfig
 ```
 
