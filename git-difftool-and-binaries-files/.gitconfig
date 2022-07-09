@@ -1,0 +1,26 @@
+[diff]
+    tool = "auto"
+
+[difftool "auto"]
+    cmd = git-auto-diff.sh $LOCAL $REMOTE
+
+[diff "docx"]
+	textconv = pandoc --to=plain
+
+[diff "xlsx"]
+	textconv = unoconv --format=csv --stdout
+
+[difftool "docx"]
+    cmd = echo $LOCAL && echo $REMOTE && t1=`mktemp` && `pandoc --to=plain $LOCAL --output=$t1` && t2=`mktemp` && `pandoc --to=plain $REMOTE --output=$t2` && meld $t1 $t2 && rm -f $t1 $t2
+
+[difftool "xlsx"]
+    cmd = t1=`mktemp` && `unoconv --format=csv --stdout $LOCAL >$t1` && t2=`mktemp` && `unoconv --format=csv --stdout $REMOTE >$t2` && meld $t1 $t2 && rm -f $t1 $t2
+
+[difftool "xxd"]
+   cmd = t1=`mktemp` && `xxd $LOCAL >$t1` && t2=`mktemp` && `xxd $REMOTE >$t2` && meld $t1 $t2 && rm -f $t1 $t2
+
+[difftool "unzip-v"]
+   cmd = t1=`mktemp` && `unzip -v $LOCAL >$t1` && t2=`mktemp` && `unzip -v $REMOTE >$t2` && meld $t1 $t2 && rm -f $t1 $t2
+
+[difftool "unzip-c"]
+   cmd = t1=`mktemp` && `unzip -c $LOCAL >$t1` && t2=`mktemp` && `unzip -c $REMOTE >$t2` && meld $t1 $t2 && rm -f $t1 $t2
