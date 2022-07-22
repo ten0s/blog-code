@@ -6,7 +6,7 @@ $ cd blog-code/nodejs-gtk-hello-world-on-windows
 ```
 
 ```
-$ npm install npm install --ignore-scripts
+$ npm install --ignore-scripts
 $ node_modules/node-gtk/windows/mingw_include_extra.sh
 $ npm rebuild node-gtk
 ```
