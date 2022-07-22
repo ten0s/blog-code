@@ -26,7 +26,7 @@ TEMP=$(mktemp)
 while true; do
     cdb -c "g;q" node index.js &>$TEMP
     if [[ $? -ne 0 ]]; then
-	copy-dlls $TEMP /mingw64/bin/ ./
+        copy-dlls $TEMP /mingw64/bin/ ./
         copy-typelibs $TEMP /mingw64/lib/girepository-1.0/ ./lib/girepository-1.0/
     else
         break
@@ -34,5 +34,4 @@ while true; do
 done
 rm $TEMP
 
-echo "Done"
 exit 0

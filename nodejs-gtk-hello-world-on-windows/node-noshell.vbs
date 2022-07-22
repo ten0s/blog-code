@@ -14,7 +14,7 @@ REM something it knows really well: cmd.exe /C.
 
 ReDim Init(2)
 Init(0) = "cmd.exe /C"
-Init(1) = "node"
+Init(1) = "node.exe"
 
 ReDim Args(WScript.Arguments.Count + 1)
 
