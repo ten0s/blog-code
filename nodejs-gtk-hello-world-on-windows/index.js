@@ -1,3 +1,5 @@
+//process.env['PATH'] = `${__dirname}\\mingw64\\bin;` + process.env['PATH']
+
 const gi = require('node-gtk')
 const Gtk = gi.require('Gtk', '3.0')
 
