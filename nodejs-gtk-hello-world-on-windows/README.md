@@ -18,3 +18,9 @@ $ npm rebuild node-gtk
 ```
 $ node index.js
 ```
+
+Find and copy locally GTK dependencies (DLLs and Typelibs)
+
+```
+$ ./copy-mingw64-deps.sh node.exe index.js
+```
