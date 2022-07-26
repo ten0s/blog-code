@@ -1,6 +1,6 @@
 Code for
 
-* https://ten0s.github.io/blog/2022/07/22/nodejs-gtk-hello-world-on-windows and
+* https://ten0s.github.io/blog/2022/07/22/nodejs-gtk-hello-world-on-windows
 * https://ten0s.github.io/blog/2022/07/25/find-dlls-and-typelibs-dependencies-for-nodejs-gtk-application-on-windows
 
 
