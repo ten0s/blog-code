@@ -1,10 +1,13 @@
 {
-  "name": "hello-gtk",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Dmitry Klionsky aka ten0s",
-  "license": "MIT",
-  "dependencies": {
-     "node-gtk": "github:ten0s/node-gtk#blog-hello-gtk"
-  }
+    "name": "hello-gtk",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Dmitry Klionsky aka ten0s",
+    "license": "MIT",
+    "dependencies": {
+        "node-gtk": "github:ten0s/node-gtk#blog-hello-gtk"
+    },
+    "devDependencies": {
+        "pkg": "5.7.0"
+    }
 }
