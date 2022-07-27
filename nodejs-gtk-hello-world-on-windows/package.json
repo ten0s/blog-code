@@ -8,9 +8,6 @@
         "node-gtk": "github:ten0s/node-gtk#blog-hello-gtk"
     },
     "devDependencies": {
-        "@rollup/plugin-commonjs": "22.0.0",
-        "@rollup/plugin-node-resolve": "13.3.0",
-        "pkg": "5.7.0",
-        "rollup": "2.74.1"
+        "pkg": "5.8.0"
     }
 }
