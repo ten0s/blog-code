@@ -23,10 +23,21 @@ Find and copy locally GTK dependencies (DLLs and Typelibs)
 $ ./copy-mingw64-deps.sh node.exe index.js
 ```
 
+Package Node.js into the executable
+
 ```
+$ NODE=$(node --version | sed -E 's/v([0-9]+)\..*/node\1/')
 $ npx pkg -c pkg.json -t ${NODE}-win-x64 -o hello-gtk.exe index.js
 ```
 
+Run the package
+
 ```
 $ ./hello-gtk.exe
+```
+
+Create the distribution package
+
+```
+$ zip -r hello-gtk.zip hello-gtk.exe noprompt.vbs mingw64/
 ```
