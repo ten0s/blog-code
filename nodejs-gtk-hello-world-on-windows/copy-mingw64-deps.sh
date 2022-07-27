@@ -35,16 +35,16 @@ function copy-typelibs() {
 }
 
 if [[ $# -lt 1 ]]; then
-    echo "Usage: $(basename $0) COMMAND [ARG...]"
+    echo "Usage: $(basename $0) PROG [ARG...]"
     exit 1
 fi
 
-COMMAND=$1
+PROG=$1
 shift
 ARGS="$@"
 
-if ! is-sls-enabled $COMMAND; then
-    echo "Enable Show Loader Snaps (sls) for $COMMAND and try again"
+if ! is-sls-enabled $PROG; then
+    echo "Enable Show Loader Snaps (sls) for $PROG and try again"
     exit 1
 fi
 
@@ -59,7 +59,7 @@ mkdir -p ./lib/girepository-1.0/
 
 TEMP=$(mktemp)
 while true; do
-    cdb -c "g;q" $COMMAND $ARGS &>$TEMP
+    cdb -c "g;q" $PROG $ARGS &>$TEMP
     if [[ $? -ne 0 ]]; then
         copy-dlls $TEMP /mingw64/bin/ ./
         copy-typelibs $TEMP /mingw64/lib/girepository-1.0/ ./lib/girepository-1.0/
