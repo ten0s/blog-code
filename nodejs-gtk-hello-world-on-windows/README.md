@@ -24,8 +24,7 @@ $ ./copy-mingw64-deps.sh node.exe index.js
 ```
 
 ```
-$ npx rollup -c
-$ npx pkg -c pkg.json -t ${NODE}-win-x64 -o hello-gtk.exe pkg/index.js
+$ npx pkg -c pkg.json -t ${NODE}-win-x64 -o hello-gtk.exe index.js
 ```
 
 ```
