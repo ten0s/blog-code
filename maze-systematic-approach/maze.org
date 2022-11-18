@@ -321,9 +321,6 @@ digraph {
 #+results:
 [[file:maze-graph.png]]
 
-#+results:
-[[file:../../assets/images/maze-manual/maze-graph.png]]
-
 #+begin_src dot :file maze-graph-path.png :cmdline -Kdot -Tpng :exports both
 digraph {
   Вход
