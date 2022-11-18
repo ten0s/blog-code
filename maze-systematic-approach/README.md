@@ -1,6 +1,6 @@
 Code for
 
-* https://ten0s.github.io/blog/2022/01/18/maze-systematic-approach
+* https://ten0s.github.io/blog/2022/11/18/maze-systematic-approach
 
 ```
 $ git clone https://github.com/ten0s/blog-code
