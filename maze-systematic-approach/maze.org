@@ -224,7 +224,7 @@ const drawMazeTask = () => {
     const ctx = canvas.getContext('2d')
     drawMaze(ctx)
     canvas.createPNGStream().pipe(
-        fs.createWriteStream('maze-task.png')
+        fs.createWriteStream('images/maze-task.png')
     )
 }
 
@@ -234,7 +234,7 @@ const drawMazeTagged = () => {
     drawMaze(ctx)
     tagMaze(ctx)
     canvas.createPNGStream().pipe(
-        fs.createWriteStream('tagged.png')
+        fs.createWriteStream('images/tagged.png')
     )
 }
 
@@ -245,7 +245,7 @@ const drawMazePath = () => {
     tagMaze(ctx)
     pathMaze(ctx)
     canvas.createPNGStream().pipe(
-        fs.createWriteStream('maze-path.png')
+        fs.createWriteStream('images/maze-path.png')
     )
 }
 
@@ -259,13 +259,13 @@ drawMazePath()
 : undefined
 
 #+begin_src python :python "python3" :results file :exports results
-return 'maze-path.png'
+return 'images/maze-path.png'
 #+end_src
 
 #+results:
-[[file:maze-path.png]]
+[[file:images/maze-path.png]]
 
-#+begin_src dot :file maze-graph.png :cmdline -Kdot -Tpng :exports both
+#+begin_src dot :file images/maze-graph.png :cmdline -Kdot -Tpng :exports both
 digraph {
   Вход
   Выход
@@ -319,9 +319,9 @@ digraph {
 #+end_src
 
 #+results:
-[[file:maze-graph.png]]
+[[file:images/maze-graph.png]]
 
-#+begin_src dot :file maze-graph-path.png :cmdline -Kdot -Tpng :exports both
+#+begin_src dot :file images/maze-graph-path.png :cmdline -Kdot -Tpng :exports both
 digraph {
   Вход
   Выход
@@ -375,4 +375,4 @@ digraph {
 #+end_src
 
 #+results:
-[[file:maze-graph-path.png]]
+[[file:images/maze-graph-path.png]]

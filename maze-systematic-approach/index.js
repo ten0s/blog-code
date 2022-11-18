@@ -200,7 +200,7 @@ const drawMazeTask = () => {
     const ctx = canvas.getContext('2d')
     drawMaze(ctx)
     canvas.createPNGStream().pipe(
-        fs.createWriteStream('maze-task.png')
+        fs.createWriteStream('images/maze-task.png')
     )
 }
 
@@ -210,7 +210,7 @@ const drawMazeTagged = () => {
     drawMaze(ctx)
     tagMaze(ctx)
     canvas.createPNGStream().pipe(
-        fs.createWriteStream('maze-tagged.png')
+        fs.createWriteStream('images/maze-tagged.png')
     )
 }
 
@@ -221,7 +221,7 @@ const drawMazePath = () => {
     tagMaze(ctx)
     pathMaze(ctx)
     canvas.createPNGStream().pipe(
-        fs.createWriteStream('maze-path.png')
+        fs.createWriteStream('images/maze-path.png')
     )
 }
 
