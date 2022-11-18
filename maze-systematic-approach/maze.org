@@ -21,7 +21,7 @@ C-c C-, s   - inserts #+begin_src ... #+end_src
 
 #+results:
 
-#+begin_src js :cmd "NODE_PATH=./node_modules node" :exports none
+#+begin_src js :cmd "NODE_PATH=./node_modules node"
 const {createCanvas} = require('canvas')
 const fs = require('fs')
 
@@ -258,14 +258,14 @@ drawMazePath()
 #+results:
 : undefined
 
-#+begin_src python :python "python3" :results file :exports none
+#+begin_src python :python "python3" :results file :exports results
 return 'maze-path.png'
 #+end_src
 
 #+results:
 [[file:maze-path.png]]
 
-#+begin_src dot :file maze-graph.png :cmdline -Kdot -Tpng
+#+begin_src dot :file maze-graph.png :cmdline -Kdot -Tpng :exports both
 digraph {
   Вход
   Выход
@@ -324,7 +324,7 @@ digraph {
 #+results:
 [[file:../../assets/images/maze-manual/maze-graph.png]]
 
-#+begin_src dot :file maze-graph-path.png :cmdline -Kdot -Tpng
+#+begin_src dot :file maze-graph-path.png :cmdline -Kdot -Tpng :exports both
 digraph {
   Вход
   Выход
