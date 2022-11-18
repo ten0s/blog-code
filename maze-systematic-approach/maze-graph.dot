@@ -1,0 +1,50 @@
+digraph {
+  Вход
+  Выход
+  Азел  [color="green"]
+  Акр   [color="red"]
+  Бзел  [color="green"]
+  Бкр   [color="red"]
+  Взел  [color="green"]
+  Вкр   [color="red"]
+  Гзел  [color="green"]
+  Гкр   [color="red"]
+  Дзел  [color="green"]
+  Дкр   [color="red"]
+  Езел  [color="green"]
+  Екр   [color="red"]
+
+  Вход -> Азел  [label="1", color="green"]
+
+  Азел -> Екр   [label="2", color="red"]
+  Азел -> Бкр   [label="4", color="red"]
+  Акр  -> Езел  [label="3", color="green"]
+  Бзел -> Акр   [label="4", color="red"]
+  Бзел -> Екр   [label="5", color="red"]
+  Бкр  -> Взел  [label="6", color="green"]
+  Взел -> Вкр   [label="8", color="red"]
+  Вкр  -> Бзел  [label="6", color="green"]
+
+  Вкр  -> Гзел  [label="7", color="green"]
+  Вкр  -> Гзел  [label="9", color="green"]
+
+  Вкр  -> Дзел  [label="13", color="green"]
+  Гзел -> Екр   [label="10", color="red"]
+  Гзел -> Екр   [label="11", color="red"]
+
+  Гкр  -> Взел  [label="7", color="green"]
+  Гкр  -> Взел  [label="9", color="green"]
+
+  Гкр  -> Езел  [label="12", color="green"]
+  Дзел -> Екр   [label="14", color="red"]
+  Дкр  -> Взел  [label="13", color="green"]
+
+  Езел -> Гкр   [label="10", color="red"]
+  Езел -> Гкр   [label="11", color="red"]
+
+  Езел -> Дкр   [label="14", color="red"]
+  Екр  -> Азел  [label="3" , color="green"]
+  Екр  -> Гзел  [label="12", color="green"]
+
+  Езел -> Выход [label="15", color="red"]
+}
