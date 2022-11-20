@@ -11,5 +11,5 @@ index.js: node_modules
 
 .PHONY: graphs
 graphs:
-	dot -Tpng maze-graph.dot > images/maze-graph.png
+	dot -Tpng maze-graph.dot      > images/maze-graph.png
 	dot -Tpng maze-graph-path.dot > images/maze-graph-path.png
