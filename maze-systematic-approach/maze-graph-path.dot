@@ -14,16 +14,16 @@ digraph {
   Езел  [color="green"]
   Екр   [color="red"]
 
-  Вход -> Азел  [label="1", color="green", penwidth=3]
+  Вход -> Азел  [label="1", color="green", penwidth=5]
 
   Азел -> Екр   [label="2", color="red"]
-  Азел -> Бкр   [label="4", color="red", penwidth=3]
-  Акр  -> Езел  [label="3", color="green", penwidth=3]
-  Бзел -> Акр   [label="4", color="red", penwidth=3]
+  Азел -> Бкр   [label="4", color="red", penwidth=5]
+  Акр  -> Езел  [label="3", color="green", penwidth=5]
+  Бзел -> Акр   [label="4", color="red", penwidth=5]
   Бзел -> Екр   [label="5", color="red"]
-  Бкр  -> Взел  [label="6", color="green", penwidth=3]
-  Взел -> Вкр   [label="8", color="red", penwidth=3]
-  Вкр  -> Бзел  [label="6", color="green", penwidth=3]
+  Бкр  -> Взел  [label="6", color="green", penwidth=5]
+  Взел -> Вкр   [label="8", color="red", penwidth=5]
+  Вкр  -> Бзел  [label="6", color="green", penwidth=5]
 
   Вкр  -> Гзел  [label="7", color="green"]
   Вкр  -> Гзел  [label="9", color="green"]
@@ -46,5 +46,5 @@ digraph {
   Екр  -> Азел  [label="3" , color="green"]
   Екр  -> Гзел  [label="12", color="green"]
 
-  Езел -> Выход [label="15", color="red", penwidth=3]
+  Езел -> Выход [label="15", color="red", penwidth=5]
 }

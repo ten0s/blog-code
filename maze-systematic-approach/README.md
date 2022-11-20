@@ -11,12 +11,15 @@ Make maze images
 
 ```
 $ npm install
+```
+
+```
 $ node index.js
 ```
 
 Make graph images
 
 ```
-$ dot -Tpng -O maze-graph.dot
-$ dot -Tpng -O maze-graph-path.dot
+$ dot -Tpng maze-graph.dot > images/maze-graph.png
+$ dot -Tpng maze-graph-path.dot > images/maze-graph-path.png
 ```
