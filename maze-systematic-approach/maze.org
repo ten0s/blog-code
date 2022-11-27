@@ -21,7 +21,8 @@ C-c C-, s   - inserts #+begin_src ... #+end_src
 
 #+results:
 
-#+begin_src js :cmd "NODE_PATH=./node_modules node"
+#+headers: :cmd "NODE_PATH=./node_modules node"
+#+begin_src js
   const {createCanvas} = require('canvas')
   const fs = require('fs')
 
@@ -234,7 +235,7 @@ C-c C-, s   - inserts #+begin_src ... #+end_src
       drawMaze(ctx)
       tagMaze(ctx)
       canvas.createPNGStream().pipe(
-          fs.createWriteStream('images/tagged.png')
+          fs.createWriteStream('images/maze-tagged.png')
       )
   }
 
@@ -265,7 +266,11 @@ return 'images/maze-path.png'
 #+results:
 [[file:images/maze-path.png]]
 
-#+begin_src dot :file images/maze-graph.png :cmdline -Kdot -Tpng :exports both
+
+#+headers: :file images/maze-graph.png
+#+headers: :cmdline -Kdot -Tpng
+#+headers: :exports both
+#+begin_src dot
   digraph {
     Вход
     Выход
@@ -321,7 +326,11 @@ return 'images/maze-path.png'
 #+results:
 [[file:images/maze-graph.png]]
 
-#+begin_src dot :file images/maze-graph-path.png :cmdline -Kdot -Tpng :exports both
+#+headers: :file images/maze-graph-path.png
+#+headers: :cmdline -Kdot -Tpng
+#+headers: :exports both
+#+headers: :var pw=5
+#+begin_src dot
   digraph {
     Вход
     Выход
@@ -338,16 +347,16 @@ return 'images/maze-path.png'
     Езел  [color="green"]
     Екр   [color="red"]
 
-    Вход -> Азел  [label="1", color="green", penwidth=3]
+    Вход -> Азел  [label="1", color="green", penwidth=$pw]
 
     Азел -> Екр   [label="2", color="red"]
-    Азел -> Бкр   [label="4", color="red", penwidth=3]
-    Акр  -> Езел  [label="3", color="green", penwidth=3]
-    Бзел -> Акр   [label="4", color="red", penwidth=3]
+    Азел -> Бкр   [label="4", color="red", penwidth=$pw]
+    Акр  -> Езел  [label="3", color="green", penwidth=$pw]
+    Бзел -> Акр   [label="4", color="red", penwidth=$pw]
     Бзел -> Екр   [label="5", color="red"]
-    Бкр  -> Взел  [label="6", color="green", penwidth=3]
-    Взел -> Вкр   [label="8", color="red", penwidth=3]
-    Вкр  -> Бзел  [label="6", color="green", penwidth=3]
+    Бкр  -> Взел  [label="6", color="green", penwidth=$pw]
+    Взел -> Вкр   [label="8", color="red", penwidth=$pw]
+    Вкр  -> Бзел  [label="6", color="green", penwidth=$pw]
 
     Вкр  -> Гзел  [label="7", color="green"]
     Вкр  -> Гзел  [label="9", color="green"]
@@ -370,7 +379,7 @@ return 'images/maze-path.png'
     Екр  -> Азел  [label="3" , color="green"]
     Екр  -> Гзел  [label="12", color="green"]
 
-    Езел -> Выход [label="15", color="red", penwidth=3]
+    Езел -> Выход [label="15", color="red", penwidth=$pw]
   }
 #+end_src
 
