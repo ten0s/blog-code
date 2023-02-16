@@ -59,8 +59,11 @@ mkdir -p ./lib/girepository-1.0/
 
 TEMP=$(mktemp)
 while true; do
-    cdb -c "g;q" $PROG $ARGS &>$TEMP
-    if [[ $? -ne 0 ]]; then
+    cdb -c "g;q" $PROG $ARGS &> $TEMP
+    ret1=$?
+    grep ERROR $TEMP &> /dev/null
+    ret2=$?
+    if [[ $ret1 -ne 0 ]] || [[ $ret2 -eq 0 ]]; then
         copy-dlls $TEMP /mingw64/bin/ ./
         copy-typelibs $TEMP /mingw64/lib/girepository-1.0/ ./lib/girepository-1.0/
     else
